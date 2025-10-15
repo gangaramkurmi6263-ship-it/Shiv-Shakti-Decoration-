@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shiv Shakti Flower Decoration</title>
+  <style>
+    body { margin:0; font-family: 'Arial', sans-serif; background: #fff0f5; color:#333; }
+    header { background: #ffe6f0; padding:15px 20px; position:sticky; top:0; z-index:100; display:flex; justify-content:space-between; align-items:center; }
+    header h1 { margin:0; font-size:1.2rem; color:#d63384; }
+    nav button { margin:0 5px; padding:6px 12px; border:none; border-radius:5px; background:#fff0f5; cursor:pointer; }
+    nav button.active, nav button:hover { background:#ffd6e0; }
+    section { padding:40px 20px; max-width:1000px; margin:auto; }
+    h2 { color:#d63384; margin-bottom:15px; }
+    .grid { display:grid; gap:20px; }
+    .grid-2 { grid-template-columns: 1fr 1fr; }
+    .grid-3 { grid-template-columns: repeat(3,1fr); }
+    img { width:100%; border-radius:10px; }
+    .card { background:#fff; padding:15px; border-radius:10px; box-shadow:0 2px 8px rgba(0,0,0,0.1); }
+    footer { text-align:center; padding:20px; font-size:0.8rem; color:#555; background:#ffe6f0; margin-top:40px; }
+    .btn { background:#d63384; color:white; border:none; padding:8px 15px; border-radius:5px; cursor:pointer; }
+    .btn:hover { background:#b0266f; }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Shiv Shakti Flower Decoration</h1>
+  <nav>
+    <button class="active" onclick="showSection('home')">Home</button>
+    <button onclick="showSection('about')">About</button>
+    <button onclick="showSection('services')">Services</button>
+    <button onclick="showSection('contact')">Contact</button>
+  </nav>
+</header>
+
+<section id="home">
+  <h2>Welcome to Shiv Shakti Flower Decoration</h2>
+  <p>We provide elegant decorations for weddings, birthdays, anniversaries and Ganesh Puja. Rent or full setup service available.</p>
+  <div class="grid grid-3">
+    <img src="https://source.unsplash.com/300x200/?wedding,flowers,decoration" alt="wedding">
+    <img src="https://source.unsplash.com/300x200/?birthday,decor,balloons" alt="birthday">
+    <img src="https://source.unsplash.com/300x200/?puja,flowers" alt="puja">
+  </div>
+</section>
+
+<section id="about" style="display:none;">
+  <h2>About Us</h2>
+  <p>Shiv Shakti Flower Decoration was founded to bring beauty, joy, and elegance to every celebration. From wedding ceremonies to birthdays and traditional pujas, our mission is to deliver creative, affordable, and high-quality decorations that make every moment special.</p>
+  <p>We take pride in transforming ordinary spaces into stunning venues filled with color, light, and floral art. Every design is customized to fit your vision and budget.</p>
+</section>
+
+<section id="services" style="display:none;">
+  <h2>Our Services</h2>
+  <div class="grid grid-3">
+    <div class="card">
+      <h3>Wedding & Mandap Decoration</h3>
+      <p>Traditional to modern mandaps, floral backdrops, and lighting arrangements.</p>
+    </div>
+    <div class="card">
+      <h3>Birthday & Anniversary Setup</h3>
+      <p>Theme-based balloon, flower and light decoration for birthdays and anniversaries.</p>
+    </div>
+    <div class="card">
+      <h3>Puja & Event Decoration</h3>
+      <p>Ganesh Puja, housewarming and festive decor with vibrant floral designs.</p>
+    </div>
+  </div>
+</section>
+
+<section id="contact" style="display:none;">
+  <h2>Contact Us</h2>
+  <p>Phone: 9399828925</p>
+  <p>Address: Bada Bajar, Sagar, MP</p>
+  <p>Email: (add-your-email@example.com)</p>
+  <button class="btn" onclick="window.location='tel:9399828925'">Call Now</button>
+</section>
+
+<footer>
+  © 2025 Shiv Shakti Flower Decoration • All rights reserved
+</footer>
+
+<script>
+function showSection(sectionId){
+  const sections = ['home','about','services','contact'];
+  sections.forEach(s => {
+    document.getElementById(s).style.display = (s===sectionId) ? 'block' : 'none';
+  });
+  document.querySelectorAll('nav button').forEach(btn => btn.classList.remove('active'));
+  event.target.classList.add('active');
+}
+</script>
+
+</body>
+</html>
